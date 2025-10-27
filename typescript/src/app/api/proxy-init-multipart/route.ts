@@ -13,9 +13,6 @@ export async function POST(req: NextRequest) {
     body,
   });
 
-  console.log("res:", res);
-  console.log("apiKey:", apiKey);
-
   const data = await res.json();
 
   return new NextResponse(JSON.stringify(data.data), {
